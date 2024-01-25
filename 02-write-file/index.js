@@ -6,7 +6,8 @@ const { stdin, stdout } = process;
 stdout.write('Type in text to add\n');
 
 stdin.on('data', (data) => {
-  if (data.toString().trim() === 'exit') process.exit();
+  if (data.toString().trim() === 'exit')
+    process.exit(stdout.write('Good luck learning Node.js!'));
   fs.appendFile(path.join(__dirname, '/text.txt'), data, (err) => {
     if (err) {
       console.error(err);
